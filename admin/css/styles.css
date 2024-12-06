@@ -1,0 +1,447 @@
+/* General Reset */
+body, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Sidebar Container */
+.sidebar {
+    width: 210px;
+    background-color: #f8f9fa; /* Off-white background */
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000; /* Ensure the sidebar is on top */
+}
+
+
+/* Logo Section */
+.sidebar .logo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sidebar .logo img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+.sidebar .location-text {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-menu .menu-item {
+    margin-bottom: 10px;
+}
+
+/* Menu Links */
+.sidebar-menu a {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #000; /* Default text color: black */
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar-menu a:hover {
+    background-color: #007bff; /* Highlight on hover */
+    color: #fff;
+}
+
+/* Icon Styling */
+.sidebar-menu a i {
+    font-size: 18px; /* Adjust icon size */
+    margin-right: 10px;
+    color: #000; /* Default icon color: black */
+}
+
+/* Submenu */
+.submenu {
+    list-style-type: none;
+    display: none; /* Hidden by default */
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.submenu li {
+    margin-bottom: 5px;
+}
+
+/* Submenu Items */
+.submenu a {
+    background-color: #ffffff; /* White background */
+    color: #000; /* Default submenu text color: black */
+    padding: 8px 15px;
+    border-radius: 5px; /* Rounded edges */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Submenu Item Hover */
+.submenu a:hover {
+    background-color: #007bff;
+    color: #ffffff;
+}
+.sidebar-menu a:hover i {
+    color: #fff; /* Change icon color to white on hover */
+}
+
+/* Show Submenu on Hover */
+.menu-item:hover .submenu {
+    display: block; /* Show submenu */
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #2C3E50;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 210px); /* Adjust for sidebar width */
+    margin-left: 210px; /* Match the width of the sidebar */
+    position: fixed;
+    top: 0;
+    z-index: 1000; /* Ensure the navbar is on top */
+    height: 40px;
+}
+
+/* Navbar Title */
+.navbar .navbar-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    position: absolute;
+    left: 50%; /* Center the title */
+    transform: translateX(-50%);
+    
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 210px; /* Space for the fixed sidebar */
+    margin-top: 40px; /* Space for the fixed navbar */
+    width: calc(100% - 210px); /* Adjust width to fit content area excluding the sidebar */
+    padding: 20px;
+    background-color: #ecf0f1; /* White background for content area */
+    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    height: calc(100vh - 40px); /* Full viewport height minus navbar height */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+/* Optional: Style the scrollbars */
+.main-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+    background: #ccc; /* Color of the scrollbar thumb */
+    border-radius: 4px;
+}
+
+.main-content::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the scrollbar track */
+}
+
+
+
+.register-container {
+    width: 80%;
+    max-width: 350px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.register-container h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #2C3E50;
+}
+
+.register-container form {
+    margin-top: 20px;
+}
+
+.register-container input[type="email"], 
+.register-container input[type="password"],
+.register-container select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #BDC3C7;
+    border-radius: 4px;
+    padding-left: 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.register-container input[type="email"]::placeholder, 
+.register-container input[type="password"]::placeholder {
+    color: #95A5A6;
+}
+
+.register-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3498DB;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.register-container button:hover {
+    background-color: #2980B9;
+}
+
+.error {
+    color: red;
+    margin-bottom: 15px;
+}
+/* Profile Header */
+.profile-header {
+    display: flex;
+    justify-content: space-between; /* Space out the content */
+    align-items: flex-start; /* Align items to the start */
+    margin-bottom: 20px; /* Space below the header */
+}
+
+/* Profile Picture */
+/* Profile Picture Container */
+.profile-header {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-picture {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-picture img {
+    width: 150px; /* Adjust size as needed */
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* Icons */
+.profile-icons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+}
+
+.profile-icons i {
+    font-size: 20px;
+    color: #000000;
+    cursor: pointer;
+    background: none; /* Remove background */
+    border: none; /* Remove border if any */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    margin: 15% auto;
+    display: block;
+    max-width: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #bbb;
+}
+
+
+/* Form Layout */
+form {
+    display: flex;
+    flex-wrap: wrap; /* Allows the items to wrap */
+    gap: 15px; /* Space between form groups */
+}
+
+/* Form Layout */
+/* Form Layout Styles */
+form {
+    display: flex;
+    flex-wrap: wrap; /* Allows the items to wrap */
+    gap: 15px; /* Space between form groups */
+}
+
+/* Form Group Styles */
+.form-group {
+    width: calc(50% - 15px); /* Two items per row with spacing */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    margin-bottom: 15px; /* Reduced bottom margin */
+}
+
+/* Form Group Labels and Inputs */
+.form-group label {
+    display: block; /* Block element to place label above the input */
+    font-size: 14px; /* Font size */
+    color: #333; /* Darker label color */
+    margin-bottom: 5px; /* Space below the label */
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px 10px; /* Padding inside the input */
+    border: 1px solid #ddd; /* Lighter border color */
+    border-radius: 4px; /* Slightly rounded corners */
+    font-size: 14px; /* Adjust font size */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    background-color: #f9f9f9; /* Light background color */
+}
+
+/* Button Styling */
+.form-group button {
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+}
+
+/* Optional: Center the Form Container */
+.form-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#sex-group {
+    display: none; /* Initially hide the select element */
+}
+.center-button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #007bff; /* Bootstrap primary blue */
+    color: white;
+    border: none;
+    border-radius: 25px; /* Rounded edges */
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+    position: center;
+}
+
+.center-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+/* Submit Button */
+/* Ensure icons are centered in buttons */
+.btn-icon {
+    background: none;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 18px; /* Adjust size as needed */
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.btn-icon i {
+    font-size: 18px; /* Adjust icon size */
+}
+
+/* Save button styling */
+.update-btn {
+    color: blue; /* Color for update button */
+}
+
+.update-btn:hover {
+    color: #003d99; /* Darker blue on hover */
+    background-color: #e6f0ff; /* Light blue background on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+/* Delete button styling */
+.delete-btn {
+    color: red; /* Color for delete button */
+}
+
+.delete-btn:hover {
+    color: #b30000; /* Darker red on hover */
+    background-color: #ffe6e6; /* Light red background on hover */
+    border-radius: 5px; /* Rounded corners on hover */
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.action-buttons form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.action-buttons form button {
+    padding: 5px; /* Adjust padding to make buttons smaller */
+}
+
+
